@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZenFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #f8f9fa;
+      --surface: #ffffff;
+      --primary: #0d6efd;
+      --danger: #dc3545;
+      --success: #198754;
+      --text-primary: #212529;
+      --text-secondary: #6c757d;
+      --border-color: #dee2e6;
+    }
+    body {
+      width: 340px;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-primary);
+    }
+    .container { padding: 16px; }
+    h2 { text-align: center; margin-top: 0; }
+    
+    /* Timer Section */
+    .timer-section {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    #timer-display {
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 10px 0;
+      color: var(--primary);
+    }
+    .timer-inputs { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; }
+    .timer-inputs input { width: 60px; text-align: center; padding: 8px; border: 1px solid var(--border-color); border-radius: 6px; }
+    .timer-inputs label { font-size: 0.9rem; color: var(--text-secondary); }
+    #start-stop-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      background-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* List Management */
+    .list-section { margin-top: 16px; }
+    .input-group { display: flex; margin-bottom: 8px; }
+    #site-input { flex-grow: 1; border: 1px solid var(--border-color); border-radius: 6px; padding: 8px; font-size: 14px; }
+    #add-button { border: none; background-color: var(--primary); color: white; border-radius: 6px; padding: 0 12px; margin-left: 8px; cursor: pointer; }
+    ul { list-style-type: none; padding-left: 0; margin: 0; max-height: 150px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--surface); }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 10px; font-size: 14px; border-bottom: 1px solid var(--border-color); }
+    li:last-child { border-bottom: none; }
+    .remove-btn { border: none; background: none; cursor: pointer; padding: 4px; display:flex; align-items:center; }
+    .remove-btn svg { fill: var(--text-secondary); transition: fill 0.2s; }
+    .remove-btn:hover svg { fill: var(--danger); }
+    
+    .footer { text-align: center; margin-top: 16px; }
+    #options-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>ZenFlow</h2>
+    <div class="timer-section">
+      <div id="timer-display">25:00</div>
+      <div class="timer-inputs">
+        <input type="number" id="minutes-input" value="25" min="1">
+        <label>min</label>
+      </div>
+      <button id="start-stop-btn">Start Focus Session</button>
+    </div>
+    
+    <div class="list-section">
+      <div class="input-group">
+        <input type="text" id="site-input" placeholder="e.g., www.youtube.com">
+        <button id="add-button">+</button>
+      </div>
+      <ul id="sites-list"></ul>
+    </div>
+
+    <div class="footer">
+      <a href="#" id="options-link">Advanced Settings & Schedules &rarr;</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

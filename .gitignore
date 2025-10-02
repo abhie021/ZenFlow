@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code settings folder
+.vscode/
+
+# Node.js dependencies (if ever used)
+node_modules/
+
+# Logs
+*.log
+
+# Chrome extension output/build files
+*.crx
+*.pem
+
+# Temporary swap files
+*.swp
+*.tmp
+
+# Ignore any other system files
+ehthumbs.db
+Desktop.ini

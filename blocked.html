@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus Blocked</title>
+  <!-- THIS IS THE FIX: It tells the browser how to read characters correctly -->
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    #quote {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    #timer {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🎯</div>
+    <h1>Stay Focused</h1>
+    <p id="quote">"The secret of getting ahead is getting started."</p>
+    <div id="timer">
+      Time Remaining: <span id="time-left"></span>
+    </div>
+  </div>
+  <script src="blocked.js"></script>
+</body>
+</html>
+
