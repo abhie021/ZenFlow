@@ -2,7 +2,7 @@
 
 ZenFlow is a powerful Chrome extension designed to help you reclaim your focus in a world full of digital distractions. Use the focus timer, create automated blocking schedules, and track your progress to eliminate distracting websites and find your flow.
 
-![ZenFlow Screenshot]("https://github.com/user-attachments/assets/a5d8b6be-ef43-47f0-be11-3923bc720b0e")
+<img width="1913" height="986" alt="Image" src="https://github.com/user-attachments/assets/a5d8b6be-ef43-47f0-be11-3923bc720b0e" />
 
 ---
 
